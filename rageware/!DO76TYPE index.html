@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RageWare Keys</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;}
+
+/* BODY WITH ANIMATED BACKGROUND */
+body {
+  font-family:'Montserrat',sans-serif;
+  margin:0;
+  padding:0;
+  color:#f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(270deg, #0a0a0a, #1a0000, #0a0a0a);
+  background-size: 600% 600%;
+  animation: gradientShift 20s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* HEADER */
+header{text-align:center;padding:0;background:transparent;}
+.banner-container {
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 450px; 
+}
+.header-banner {
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 0 5px #ff0000);
+  animation: glowPulse 3s infinite alternate;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+.header-banner:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0 0 12px #ff3300);
+}
+@keyframes glowPulse {
+  0% { filter: drop-shadow(0 0 3px #ff0000); }
+  50% { filter: drop-shadow(0 0 7px #ff6600); }
+  100% { filter: drop-shadow(0 0 10px #ff3300); }
+}
+
+/* PRODUCTS */
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 3rem 1rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+/* PRODUCT CARD */
+.product {
+  position: relative;
+  border:2px solid rgba(255,0,0,0.4);
+  border-radius:1rem;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  width:300px;
+  background: linear-gradient(135deg, rgba(255,0,0,0.05), rgba(255,0,0,0.15));
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  min-height:480px;
+}
+.product:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 35px rgba(255,0,0,0.7), 0 0 25px rgba(255,0,0,0.4);
+  border-color: rgba(255,0,0,0.7);
+}
+
+/* Scroll-in animation */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ribbon */
+.ribbon {
+  position: absolute;
+  top: 0.8rem;
+  left: -0.5rem;
+  background: linear-gradient(90deg,#ff0000,#8b0000);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.8rem;
+  transform: rotate(-20deg);
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+.ribbon:hover {
+  box-shadow: 0 0 15px #ff0000;
+  transform: rotate(-20deg) scale(1.05);
+}
+
+/* Product Info */
+.product-info {
+  padding:1.5rem;
+  text-align:center;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
+  flex:1; 
+}
+.product-info h2{
+  font-size:1.9rem;
+  background:linear-gradient(90deg,#ff0000,#8b0000);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin:0;
+}
+.product-info ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 0 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.product-info ul li {
+  margin-bottom: 0.3rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.product-info ul li:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 4px #ff0000);
+}
+
+/* Icons for features */
+.day-key li:nth-child(1)::before { content: "🎯"; margin-right: 0.5rem;} 
+.day-key li:nth-child(2)::before { content: "👁️"; margin-right: 0.5rem;} 
+.day-key li:nth-child(3)::before { content: "🖥️"; margin-right: 0.5rem;} 
+.day-key li:nth-child(4)::before { content: "🛡️"; margin-right: 0.5rem;} 
+.week-key li:nth-child(1)::before { content: "🎯"; margin-right: 0.5rem;}
+.week-key li:nth-child(2)::before { content: "👁️"; margin-right: 0.5rem;}
+.week-key li:nth-child(3)::before { content: "🖥️"; margin-right: 0.5rem;}
+.week-key li:nth-child(4)::before { content: "🛡️"; margin-right: 0.5rem;}
+.month-key li:nth-child(1)::before { content: "🎯"; margin-right: 0.5rem;}
+.month-key li:nth-child(2)::before { content: "👁️"; margin-right: 0.5rem;}
+.month-key li:nth-child(3)::before { content: "🖥️"; margin-right: 0.5rem;}
+.month-key li:nth-child(4)::before { content: "🛡️"; margin-right: 0.5rem;}
+
+.price{
+  font-size:1.8rem;
+  font-weight:600;
+  background:linear-gradient(90deg,#ff0000,#8b0000);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-top:0.7rem;
+}
+
+/* PAYPAL BUTTON */
+.buy-btn{
+  padding:0.5rem 1rem;
+  background:linear-gradient(90deg,#ff0000,#8b0000);
+  border-radius:50px;
+  color:#fff;
+  font-weight:600;
+  text-decoration:none;
+  margin:0.5rem auto 0 auto;
+  display:flex;
+  align-items:center;
+  gap:0.5rem;
+  justify-content:center;
+  transition:all 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  cursor:pointer;
+  font-size:0.9rem;
+  max-width:90%;
+}
+.buy-btn:hover{
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(255,0,0,0.8), 0 0 20px rgba(255,0,0,0.5);
+}
+.buy-btn img {
+  height:18px;
+  width:auto;
+  display:inline-block;
+  transition: transform 0.3s ease, filter 0.3s ease, drop-shadow 0.3s ease;
+}
+.buy-btn:hover img {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 8px #ff0000) drop-shadow(0 0 4px #ff3300);
+}
+
+/* CONTACT */
+.contact{text-align:center;padding:4rem 1rem;}
+.contact h3{
+  font-size:2rem;
+  margin-bottom:1rem;
+  background:linear-gradient(90deg,#ff0000,#8b0000);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.contact p{margin:0.5rem 0;font-size:1.2rem;color:#ddd;}
+.contact a{color:#fff;text-decoration:none;font-weight:600;}
+.contact a:hover{text-decoration:underline;}
+
+/* FOOTER */
+footer{text-align:center;padding:1.5rem;background:#0a0a0a;font-size:0.9rem;color:#777;}
+
+/* RESPONSIVE */
+@media(max-width:1200px){
+  .products{gap:2rem;}
+}
+@media(max-width:900px){
+  .products{gap:1.5rem;padding:2rem 1rem;}
+}
+@media(max-width:600px){
+  .product-info h2{font-size:1.6rem;}
+  .price{font-size:1.6rem;}
+  .product{min-width:100%; max-width:100%; flex:1; min-height:auto;}
+  .banner-container{height:280px;}
+  .header-banner{width:95%;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="banner-container">
+    <img src="https://i.postimg.cc/9XpMR5Rv/Chat-GPT-Image-Aug-25-2025-11-45-20-PM.png" alt="RageWare Banner" class="header-banner">
+  </div>
+</header>
+
+<section class="products">
+
+<!-- Crusader Day Key -->
+<div class="product animate-on-scroll">
+<div class="product-info day-key">
+<h2>Crusader Day Key</h2>
+<ul>
+<li>Powerful aimbot</li>
+<li>Smooth ESP</li>
+<li>Good-looking menu</li>
+<li>Low chance of getting banned</li>
+</ul>
+<div class="price">$3.99</div>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="L4nceN@gmail.com">
+<input type="hidden" name="item_name" value="Crusader Day Key">
+<input type="hidden" name="amount" value="3.99">
+<input type="hidden" name="currency_code" value="USD">
+<button type="submit" class="buy-btn">
+<img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal"> Pay with PayPal
+</button>
+</form>
+</div>
+</div>
+
+<!-- Crusader Week Key -->
+<div class="product animate-on-scroll">
+<div class="ribbon">MOST POPULAR</div>
+<div class="product-info week-key">
+<h2>Crusader Week Key</h2>
+<ul>
+<li>Powerful aimbot</li>
+<li>Smooth ESP</li>
+<li>Good-looking menu</li>
+<li>Low chance of getting banned</li>
+</ul>
+<div class="price">$19.99</div>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="L4nceN@gmail.com">
+<input type="hidden" name="item_name" value="Crusader Week Key">
+<input type="hidden" name="amount" value="19.99">
+<input type="hidden" name="currency_code" value="USD">
+<button type="submit" class="buy-btn">
+<img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal"> Pay with PayPal
+</button>
+</form>
+</div>
+</div>
+
+<!-- Crusader Month Key -->
+<div class="product animate-on-scroll">
+<div class="product-info month-key">
+<h2>Crusader Month Key</h2>
+<ul>
+<li>Powerful aimbot</li>
+<li>Smooth ESP</li>
+<li>Good-looking menu</li>
+<li>Low chance of getting banned</li>
+</ul>
+<div class="price">$34.99</div>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="L4nceN@gmail.com">
+<input type="hidden" name="item_name" value="Crusader Month Key">
+<input type="hidden" name="amount" value="34.99">
+<input type="hidden" name="currency_code" value="USD">
+<button type="submit" class="buy-btn">
+<img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal"> Pay with PayPal
+</button>
+</form>
+</div>
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+<h3>Contact to Receive Product After Purchase</h3>
+<p>💬 Discord: <strong><a href="https://discord.gg/YJmeaJE7A2" target="_blank">rageware.gg</a></strong></p>
+<p>Contact for other payment methods as well.</p>
+</section>
+
+<footer>© 2025 RageWare. All rights reserved.</footer>
+
+<script>
+// Scroll-in animation
+const items = document.querySelectorAll('.animate-on-scroll');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.2 });
+items.forEach(item => observer.observe(item));
+</script>
+
+</body>
+</html>
